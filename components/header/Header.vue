@@ -31,9 +31,15 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   .theme--dark.v-toolbar.v-sheet {
     background: #1E1E1E;
     user-select: none;
+  }
+
+  .v-menu__content {
+    width: 320px !important;
+    min-width: auto !important;
+    max-width: 100%;
   }
 </style>

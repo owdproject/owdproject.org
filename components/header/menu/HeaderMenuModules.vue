@@ -1,7 +1,6 @@
 <template>
   <v-menu
       :close-on-content-click="false"
-      :min-width="320"
       nudge-bottom="66"
   >
     <template v-slot:activator="{ on, attrs }">
@@ -56,7 +55,3 @@
     mixins: [mixinLinks]
   }
 </script>
-
-<style scoped lang="scss">
-
-</style>
