@@ -40,7 +40,7 @@
       <v-card-actions class="text-center">
         <v-spacer />
 
-        <v-btn text block>
+        <v-btn text block :href="owdLinkModules" target="_blank">
           View #owd-modules on GitHub
         </v-btn>
       </v-card-actions>
