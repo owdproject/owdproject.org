@@ -27,6 +27,7 @@
 
           <v-list-item-content>
             <v-list-item-title>OWD Modules</v-list-item-title>
+            <v-list-item-subtitle>Extend your client</v-list-item-subtitle>
           </v-list-item-content>
 
           <v-list-item-action>

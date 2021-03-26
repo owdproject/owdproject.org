@@ -11,7 +11,7 @@
           text class="ml-2" :icon="$vuetify.breakpoint.xsOnly"
       >
         <v-icon :left="$vuetify.breakpoint.smAndUp">mdi-hexagon-multiple-outline</v-icon>
-        <span class="hidden-xs-only" v-text="`OWD Client`" />
+        <span class="hidden-xs-only" v-text="`Client`" />
       </v-btn>
     </template>
 

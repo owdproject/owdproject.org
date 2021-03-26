@@ -2,7 +2,7 @@
   <v-toolbar max-height="64px" height="64px" elevation="0">
 
     <Logo large class="mr-12" style="pointer-events: none;">
-      <v-toolbar-title class="font-weight-bold hidden-md-and-down">Open Web Desktop</v-toolbar-title>
+      <v-toolbar-title class="font-weight-bold" v-text="$vuetify.breakpoint.mdAndUp ? 'Open Web Desktop' : 'OWD'" />
     </Logo>
 
     <v-spacer />
