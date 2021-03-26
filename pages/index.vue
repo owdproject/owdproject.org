@@ -18,8 +18,6 @@
 
       <v-col lg="5" cols="12" class="owd-intro text-center">
 
-        <div class="mt-10 hidden-lg-and-up" />
-
         <v-img src="favicon.png" width="180" height="180" class="mx-auto" />
 
         <h2 class="mt-8 mb-1">OWD Client</h2>
