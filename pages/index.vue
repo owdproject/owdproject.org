@@ -20,7 +20,7 @@
 
         <v-img src="favicon.png" width="180" height="180" class="mx-auto" />
 
-        <h2 class="mt-8 mb-1">OWD Client</h2>
+        <h2 class="mt-8 mb-1" v-text="$vuetify.breakpoint.mdAndDown ? 'Open Web Desktop' : 'OWD Client'" />
 
         <p>
           A fully modular open-source web desktop<br class="hidden-xs-only" />
