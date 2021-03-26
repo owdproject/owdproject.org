@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row justify="center" align="center" class="my-12">
+    <v-row justify="center" align="center" class="my-3">
 
       <v-col lg="7" cols="12" class="hidden-md-and-down">
 
