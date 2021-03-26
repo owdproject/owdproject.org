@@ -27,7 +27,7 @@
           made with Vue.js 3 and TypeScript
         </p>
 
-        <p class="mx-auto shields-io">
+Fix         <p class="mx-auto mb-0 shields-io">
 
           <a :href="owdLinkRepository + '/tree/next'" target="_blank">
             <img src="https://img.shields.io/badge/owd-client-blue" />
