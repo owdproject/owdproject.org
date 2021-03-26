@@ -6,8 +6,14 @@ export default {
     socialLinkDiscord() {
       return process.env.SOCIAL_LINK_DISCORD
     },
+    socialLinkLiberaPay() {
+      return process.env.SOCIAL_LINK_LIBERAPAY
+    },
     socialLinkPatreon() {
       return process.env.SOCIAL_LINK_PATREON
+    },
+    owdLinkNpm() {
+      return process.env.SOCIAL_LINK_NPM
     },
     owdLinkRepository() {
       return process.env.SOCIAL_LINK_GITHUB

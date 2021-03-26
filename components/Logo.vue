@@ -1,15 +1,19 @@
 <template>
-  <div :class="['logo', {'logo-square': square, 'logo-small': small}]">
+  <div :class="['logo', {'logo--square': square, 'logo--small': small, 'logo--large': large}]">
     <div class="logo-content">
+
       <v-btn color="#2775a7">
         <v-icon>mdi-flask-outline</v-icon>
       </v-btn>
+
       <v-btn color="#2775a7">
         <v-icon>mdi-format-color-fill</v-icon>
       </v-btn>
+
       <v-btn color="#4c4c4c">
         <v-icon>mdi-radio</v-icon>
       </v-btn>
+
       <v-btn color="#f0584a">
         <v-icon>mdi-patreon</v-icon>
       </v-btn>
@@ -25,6 +29,7 @@ export default {
   props: {
     square: Boolean,
     small: Boolean,
+    large: Boolean,
   }
 }
 </script>
@@ -32,9 +37,8 @@ export default {
 <style scoped lang="scss">
 .logo {
   .logo-content {
+    display: inline-block;
     margin: 0 auto;
-    height: 114px;
-    padding: 3px 5px;
     border-radius: 7px;
     user-select: none;
     overflow: hidden;
@@ -64,16 +68,57 @@ export default {
     }
   }
 
-  &.logo-square {
+  &--large {
+    display: inline-block;
+
+    .logo-content {
+      display: inline-block;
+      vertical-align: -6px;
+      margin-right: 10px;
+
+      .v-btn {
+        box-sizing: border-box;
+        width: 28px;
+        min-width: auto !important;
+        min-height: 28px;
+
+        .v-icon {
+          font-size: 17px;
+
+          &.mdi-format-color-fill {
+            top: 3px;
+            left: 1px;
+            font-size: 22px;
+          }
+
+          &.mdi-radio {
+            top: -1px;
+            font-size: 20px;
+          }
+
+          &.mdi-patreon {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .v-toolbar__title {
+      display: inline-block;
+    }
+  }
+
+  &--square {
     .logo-content {
       width: 115px;
     }
   }
 
-  &.logo-small {
+  &--small {
     width: 40px;
 
     .logo-content {
+      display: inline-block;
       width: 34px;
       height: 34px;
       line-height: 16px;
@@ -98,12 +143,6 @@ export default {
         }
       }
     }
-  }
-
-  .v-toolbar__title {
-    position: absolute;
-    top: 2px;
-    left: calc(100% + 28px);
   }
 }
 </style>

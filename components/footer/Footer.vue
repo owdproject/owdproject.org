@@ -4,7 +4,7 @@
       <v-col>
 
         <div class="footer-links mb-6">
-          <a :href="owdLinkRepository" target="_blank">
+          <a :href="owdLinkRepository + '/tree/next'" target="_blank">
             <v-icon size="28">mdi-github</v-icon>
           </a>
           <a :href="socialLinkTwitter" target="_blank">
@@ -21,9 +21,9 @@
         <div class="footer-copyright">
           <p class="mb-0">
             Released under the
-            <a :href="`${owdLinkRepository}/blob/master/LICENSE`" target="_blank">MIT License</a>
+            <a :href="`${owdLinkRepository}/blob/master/LICENSE`" target="_blank">GNU GPL 3.0 License</a>
             <br />
-            Copyright &copy; 2020 hacklover
+            Copyright &copy; 2021 <a href="https://hacklover.net" target="_blank" class="credits">hacklover#2552</a>
           </p>
         </div>
 
@@ -44,7 +44,8 @@
 <style scoped lang="scss">
 .v-footer {
   user-select: none;
-  box-shadow: inset 0 1px 0 0 #2e2e2e !important;
+  background: #1E1E1E;
+  border-top: 1px solid rgba(255,255,255,0.05) !important;
 
   .footer-links {
     a {
@@ -59,6 +60,10 @@
 
     a {
       color: #999;
+    }
+
+    a.credits {
+      color: inherit;
     }
   }
 }

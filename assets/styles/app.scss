@@ -17,6 +17,14 @@
 
 #app {
   &.theme--dark {
-    background: #161616 !important;
+    background: #212121;
+  }
+
+  .v-menu__content {
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+
+    .v-divider {
+      border-color: rgba(255,255,255,0.05);
+    }
   }
 }

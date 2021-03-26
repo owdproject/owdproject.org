@@ -1,29 +1,51 @@
 <template>
-  <v-row justify="center" align="center" v-if="!demoActive">
-    <v-col cols="12" class="owd-intro text-center">
-      <Logo square style="margin: 0 auto" />
+  <div>
+    <v-row justify="center" align="center" class="my-12">
 
-      <p class="mt-8">
-        A fully modular open-source web desktop made with Vue.js
-      </p>
-      <p class="mb-0">
-        <a @click="toggleDemo">Check the demo</a>
-      </p>
-    </v-col>
-  </v-row>
+      <v-col lg="7" cols="12" class="hidden-md-and-down">
 
-  <div v-else>
-    <v-progress-circular indeterminate color="#444" class="iframe-loader" v-if="!iframeLoaded" />
-    <iframe :src="owdLinkDemo" v-show="iframeLoaded" @load="iframeLoaded = true; $store.commit('demo/SET_DEMO_LOADED', true)" />
+        <div class="iframe-container">
+          <v-progress-circular indeterminate color="#444" class="iframe-loader" v-if="!iframeLoaded" />
 
-    <v-btn text icon @click="toggleDemo" class="iframe-close" v-if="iframeLoaded">
-      <v-icon>mdi-close</v-icon>
-    </v-btn>
+          <iframe
+            :src="owdLinkDemo"
+            v-show="iframeLoaded"
+            @load="iframeLoaded = true"
+          />
+        </div>
+
+      </v-col>
+
+      <v-col lg="5" cols="12" class="owd-intro text-center">
+
+        <div class="mt-10 hidden-lg-and-up" />
+
+        <v-img src="favicon.png" width="180" height="180" class="mx-auto" />
+
+        <h2 class="mt-8 mb-1">OWD Client</h2>
+
+        <p>
+          A fully modular open-source web desktop<br class="hidden-xs-only" />
+          made with Vue.js 3 and TypeScript
+        </p>
+
+        <p class="mx-auto shields-io">
+
+          <a :href="owdLinkRepository + '/tree/next'" target="_blank">
+            <img src="https://img.shields.io/badge/owd-client-blue" />
+          </a>
+
+          <a :href="owdLinkRepository + '/tree/next'" target="_blank" class="ml-1">
+            <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/owdproject/owd-client?style=social">
+          </a>
+        </p>
+      </v-col>
+
+    </v-row>
   </div>
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
 import Logo from "../components/Logo";
 import mixinLinks from "../mixins/mixinLinks";
 export default {
@@ -39,27 +61,18 @@ export default {
       iframeLoaded: false
     }
   },
-  computed: {
-    ...mapGetters({
-      'demoActive': 'demo/active'
-    })
-  },
-  methods: {
-    toggleDemo(e) {
-      e.preventDefault()
-
-      this.$store.commit('demo/SET_DEMO_ACTIVE', !this.demoActive)
-
-      if (this.demoActive === false) {
-        this.iframeLoaded = false
-      }
-    }
+  beforeMount() {
+    this.$store.dispatch('repository/getTags')
   }
 }
 </script>
 
 <style scoped lang="scss">
   .owd-intro {
+    p.shields-io {
+      user-select: none;
+    }
+
     p {
       color: #999;
 
@@ -90,13 +103,19 @@ export default {
     }
   }
 
-  iframe {
-    border: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+  .iframe-container {
+    position: relative;
+    background: #333;
     width: 100%;
-    height: 100%;
+    height: 480px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .iframe-loader {
