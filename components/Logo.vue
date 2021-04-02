@@ -2,11 +2,11 @@
   <div :class="['logo', {'logo--square': square, 'logo--small': small, 'logo--large': large}]">
     <div class="logo-content">
 
-      <v-btn color="#2775a7">
+      <v-btn color="#3375a5">
         <v-icon>mdi-flask-outline</v-icon>
       </v-btn>
 
-      <v-btn color="#2775a7">
+      <v-btn color="#3375a5">
         <v-icon>mdi-format-color-fill</v-icon>
       </v-btn>
 
@@ -14,9 +14,10 @@
         <v-icon>mdi-radio</v-icon>
       </v-btn>
 
-      <v-btn color="#f0584a">
+      <v-btn color="#e8594f">
         <v-icon>mdi-patreon</v-icon>
       </v-btn>
+
     </div>
 
     <slot />
