@@ -30,7 +30,7 @@
         <p class="mx-auto mb-0 shields-io">
 
           <a :href="owdLinkRepository + '/tree/next'" target="_blank">
-            <img src="https://img.shields.io/badge/owd-client-blue" />
+            <img src="https://img.shields.io/badge/OWD-Client-blue" />
           </a>
 
           <a :href="owdLinkRepository + '/tree/next'" target="_blank" class="ml-1">
