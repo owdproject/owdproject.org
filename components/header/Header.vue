@@ -1,9 +1,9 @@
 <template>
   <v-toolbar max-height="64px" height="64px" elevation="0">
 
-    <Logo large class="mr-12" style="pointer-events: none;">
-      <v-toolbar-title class="font-weight-bold" v-text="$vuetify.breakpoint.mdAndUp ? 'Open Web Desktop' : 'OWD'" />
-    </Logo>
+    <v-icon :size="36" color="#888" class="ml-1 mr-5" style="margin-top: -1px;">mdi-hexagon-multiple-outline</v-icon>
+
+    <v-toolbar-title class="font-weight-bold" v-text="$vuetify.breakpoint.mdAndUp ? 'Open Web Desktop' : 'OWD'" />
 
     <v-spacer />
 
