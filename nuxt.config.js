@@ -14,6 +14,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'google-site-verification', content: 'pNA8X3Mj_Fyx_dxU3i0NXhr3ZHuiujvNAshlCNCqWKg' },
       { hid: 'description', name: 'description', content: 'Open Web Desktop is a fully modular project made with Vue.js that aims to provide a simple environment to create your own web desktop' }
     ],
     link: [
