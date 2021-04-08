@@ -95,7 +95,7 @@ export default {
   },
 
   manifest: {
-    lang: 'it',
+    lang: 'en',
     name: 'Open Web Desktop',
     short_name: 'Open Web Desktop',
     start_url: process.env.BASE_URL,
