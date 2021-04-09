@@ -23,7 +23,7 @@
             Released under the
             <a :href="`${owdLinkRepository}/blob/master/LICENSE`" target="_blank">GNU GPL 3.0 License</a>
             <br />
-            Copyright &copy; 2021 <a href="https://hacklover.net" target="_blank" class="credits">hacklover#2552</a>
+            Copyright &copy; 2021 hacklover#2552
           </p>
         </div>
 
