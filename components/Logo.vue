@@ -6,9 +6,9 @@
 
       <v-btn color="#3375a5" />
 
-      <v-btn color="#4c4c4c" />
-
       <v-btn color="#e8594f" />
+
+      <v-btn color="#4c4c4c" />
 
     </div>
 
