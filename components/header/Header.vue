@@ -1,9 +1,10 @@
 <template>
   <v-toolbar max-height="64px" height="64px" elevation="0">
 
-    <Logo large>
-      <v-toolbar-title class="font-weight-bold" v-text="$vuetify.breakpoint.mdAndUp ? 'Open Web Desktop' : 'OWD'" />
-    </Logo>
+    <v-toolbar-title
+        class="font-weight-bold"
+        v-text="$vuetify.breakpoint.mdAndUp ? 'Open Web Desktop' : 'OWD'"
+    />
 
     <v-spacer />
 
