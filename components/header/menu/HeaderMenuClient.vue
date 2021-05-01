@@ -68,9 +68,6 @@
         <v-btn text :href="socialLinkPatreon" target="_blank">
           Patreon
         </v-btn>
-        <v-btn text :href="socialLinkLiberaPay" target="_blank">
-          LiberaPay
-        </v-btn>
       </v-card-actions>
     </v-card>
   </v-menu>

@@ -27,7 +27,6 @@ export default {
     SOCIAL_LINK_GITHUB: 'https://github.com/owdproject/owd-client',
     SOCIAL_LINK_TWITTER: 'https://twitter.com/owdproject',
     SOCIAL_LINK_PATREON: 'https://patreon.com/hacklover',
-    SOCIAL_LINK_LIBERAPAY: 'https://liberapay.com/hacklover',
     SOCIAL_LINK_NPM: 'https://npmjs.com/package/@owd-client/core',
     SOCIAL_LINK_DISCORD: 'http://discord.gg/3KFVP8b',
     OWD_LINK_MODULES: 'https://github.com/topics/owd-modules',
