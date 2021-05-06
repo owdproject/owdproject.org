@@ -3,7 +3,7 @@
 
     <v-toolbar-title
         class="font-weight-bold"
-        v-text="$vuetify.breakpoint.mdAndUp ? 'Open Web Desktop' : 'OWD'"
+        v-text="$vuetify.breakpoint.smAndUp ? 'Open Web Desktop' : 'OWD'"
     />
 
     <v-spacer />
