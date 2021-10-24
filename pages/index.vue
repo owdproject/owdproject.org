@@ -65,21 +65,6 @@
         </v-responsive>
       </v-card>
 
-      <div class="mt-8">
-        Open Web Desktop demo<br />
-
-        <div style="font-size: 15px">
-          <a
-              class="grey--text text--darken-2"
-              :href="owdLinkRepository + '/tree/next'"
-              target="_blank"
-          >
-            {{owdLinkRepository.replace('https://', '')}}
-            <v-icon size="18" style="vertical-align: -2px" class="ml-1 grey--text text--darken-1">mdi-github</v-icon>
-          </a>
-        </div>
-      </div>
-
     </v-container>
 
   </div>
