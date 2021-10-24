@@ -64,7 +64,7 @@
 
       <v-card-actions>
         <v-spacer />
-.v-application
+
         <v-btn text href="#soon">
           Docs
         </v-btn>
