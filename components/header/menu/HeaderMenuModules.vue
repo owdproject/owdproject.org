@@ -10,13 +10,14 @@
           text class="ml-2" :icon="$vuetify.breakpoint.xsOnly"
       >
         <v-icon :left="$vuetify.breakpoint.smAndUp">mdi-puzzle</v-icon>
-        <span class="hidden-xs-only" v-text="`Modules`" />
+        <span class="hidden-xs-only" v-text="`Extensions`" />
       </v-btn>
     </template>
 
     <v-card>
       <v-list>
-        <v-list-item>
+
+        <v-list-item :href="owdLinkModules"  target="_blank">
           <v-list-item-avatar tile>
             <img
                 src="favicon.png"
@@ -33,17 +34,27 @@
             <v-icon>mdi-github</v-icon>
           </v-list-item-action>
         </v-list-item>
+
+        <v-list-item :href="owdLinkThemes"  target="_blank">
+          <v-list-item-avatar tile>
+            <img
+                src="favicon.png"
+                alt="Open Web Desktop"
+            >
+          </v-list-item-avatar>
+
+          <v-list-item-content>
+            <v-list-item-title>OWD Themes</v-list-item-title>
+            <v-list-item-subtitle>Extend your client</v-list-item-subtitle>
+          </v-list-item-content>
+
+          <v-list-item-action>
+            <v-icon>mdi-github</v-icon>
+          </v-list-item-action>
+        </v-list-item>
+
       </v-list>
 
-      <v-divider/>
-
-      <v-card-actions class="text-center">
-        <v-spacer />
-
-        <v-btn text block :href="owdLinkModules" target="_blank">
-          View #owd-modules on GitHub
-        </v-btn>
-      </v-card-actions>
     </v-card>
   </v-menu>
 </template>

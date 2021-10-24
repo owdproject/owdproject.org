@@ -2,10 +2,8 @@
   <v-app>
     <Header />
 
-    <v-main style="align-items: center;">
-      <v-container>
-        <nuxt />
-      </v-container>
+    <v-main>
+      <nuxt />
     </v-main>
 
     <Footer />

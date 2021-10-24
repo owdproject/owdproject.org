@@ -10,11 +10,11 @@
           <a :href="socialLinkTwitter" target="_blank">
             <v-icon size="30">mdi-twitter</v-icon>
           </a>
-          <a :href="socialLinkDiscord" target="_blank">
-            <v-icon size="26" style="vertical-align: -7px;">mdi-discord</v-icon>
-          </a>
           <a :href="socialLinkPatreon" target="_blank">
-            <v-icon size="28">mdi-patreon</v-icon>
+            <v-icon size="29">mdi-patreon</v-icon>
+          </a>
+          <a :href="socialLinkDiscord" target="_blank">
+            <v-icon size="25" style="vertical-align: -6px;">mdi-discord</v-icon>
           </a>
         </div>
 

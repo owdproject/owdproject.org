@@ -1,10 +1,10 @@
 {
-  "name": "owdproject.com",
+  "name": "owdproject.org",
   "version": "1.0.0",
-  "homepage": "https://github.com/owdproject/owdproject.com",
+  "homepage": "https://github.com/owdproject/owdproject.org",
   "author": {
     "name": "hacklover",
-    "url": "https://hacklover.net"
+    "url": "https://hacklover.net/#2552"
   },
   "private": true,
   "scripts": {

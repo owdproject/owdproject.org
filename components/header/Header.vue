@@ -1,8 +1,7 @@
 <template>
-  <v-toolbar max-height="64px" height="64px" elevation="0">
+  <v-toolbar color="transparent" max-height="64px" height="64px" elevation="0">
 
     <v-toolbar-title
-        class="font-weight-bold"
         v-text="$vuetify.breakpoint.smAndUp ? 'Open Web Desktop' : 'OWD'"
     />
 
@@ -33,9 +32,14 @@ export default {
 </script>
 
 <style lang="scss">
-  .theme--dark.v-toolbar.v-sheet {
-    background: #1E1E1E;
-    user-select: none;
+  .theme--dark.v-toolbar {
+    border: 0 !important;
+    box-shadow: none !important;
+
+    & .v-sheet {
+      user-select: none;
+      border: 0;
+    }
   }
 
   .v-menu__content {

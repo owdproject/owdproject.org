@@ -21,6 +21,9 @@ export default {
     owdLinkModules() {
       return process.env.OWD_LINK_MODULES
     },
+    owdLinkThemes() {
+      return process.env.OWD_LINK_THEMES
+    },
     owdLinkDemo() {
       return process.env.OWD_LINK_DEMO
     }

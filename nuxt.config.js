@@ -30,6 +30,7 @@ export default {
     SOCIAL_LINK_NPM: 'https://npmjs.com/package/@owd-client/core',
     SOCIAL_LINK_DISCORD: 'http://discord.gg/3KFVP8b',
     OWD_LINK_MODULES: 'https://github.com/topics/owd-modules',
+    OWD_LINK_THEMES: 'https://github.com/topics/owd-themes',
     OWD_LINK_DEMO: 'https://next-demo.owdproject.org/'
   },
 

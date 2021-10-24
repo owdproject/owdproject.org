@@ -49,7 +49,7 @@
               <v-list-item-title>OWD Client {{repositoryLastTagNext}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item :href="owdLinkRepository" target="_blank">
+          <v-list-item :href="owdLinkRepository + '/tree/master'" target="_blank">
             <v-list-item-icon>
               <v-icon>mdi-open-in-new</v-icon>
             </v-list-item-icon>
@@ -64,9 +64,13 @@
 
       <v-card-actions>
         <v-spacer />
+.v-application
+        <v-btn text href="#soon">
+          Docs
+        </v-btn>
 
         <v-btn text :href="socialLinkPatreon" target="_blank">
-          Patreon
+          Support
         </v-btn>
       </v-card-actions>
     </v-card>
