@@ -45,7 +45,7 @@
 
           <v-list-item-content>
             <v-list-item-title>OWD Themes</v-list-item-title>
-            <v-list-item-subtitle>Extend your client</v-list-item-subtitle>
+            <v-list-item-subtitle>Customize your client</v-list-item-subtitle>
           </v-list-item-content>
 
           <v-list-item-action>
