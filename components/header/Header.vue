@@ -2,7 +2,7 @@
   <v-toolbar color="transparent" max-height="64px" height="64px" elevation="0">
 
     <v-toolbar-title
-        v-text="$vuetify.breakpoint.smAndUp ? 'Open Web Desktop' : 'OWD'"
+        v-text="`Open Web Desktop`"
     />
 
     <v-spacer />
@@ -20,7 +20,6 @@ import HeaderMenuClient from "./menu/HeaderMenuClient";
 import HeaderMenuModules from "./menu/HeaderMenuModules";
 
 export default {
-  name: "Header",
   components: {HeaderMenuModules, HeaderMenuClient, Logo},
   mixins: [mixinLinks],
   data() {
