@@ -1,10 +1,10 @@
 <template>
-  <div class="my-16">
+  <div>
 
-    <v-container class="mb-16">
+    <v-container class="block my-16">
       <v-row class="my-8">
         <v-col cols="12" md="5" class="text-center">
-          <v-icon class="mt-n3" color="grey darken-2" :size="218">mdi-hexagon-multiple-outline</v-icon>
+          <v-icon class="mt-n3 mb-4 mb-md-0" color="grey darken-2" :size="$vuetify.breakpoint.smAndUp ? 218 : 120">mdi-hexagon-multiple-outline</v-icon>
         </v-col>
         <v-col cols="12" md="7" class="text-md-left text-center">
           <h2 class="text-h2 mb-7">A modular web desktop made with Vue.js</h2>
@@ -21,7 +21,7 @@
       </v-row>
     </v-container>
 
-    <div style="background: #252525;" class="py-16 grey--text">
+    <div style="background: #252525;" class="block py-16 grey--text">
       <v-container class="py-8 text-center">
         <p class="mb-8">Sponsors</p>
 
@@ -51,13 +51,14 @@
       </v-container>
     </div>
 
-    <v-container class="mt-16 text-center grey--text">
+    <v-container class="py-lg-16 text-center grey--text" :fluid="$vuetify.breakpoint.mdAndDown" id="lol">
 
-      <v-card class="mt-2">
+      <v-card>
         <v-responsive :aspect-ratio="16/9" class="iframe-container">
           <v-progress-circular indeterminate color="#444" class="iframe-loader" v-if="!iframeLoaded" />
 
           <iframe
+              class="owd-desktop"
               :src="owdLinkDemo"
               v-show="iframeLoaded"
               @load="iframeLoaded = true"
@@ -130,5 +131,21 @@ export default {
     bottom: 9px;
     left: 50%;
     margin-left: -18px;
+  }
+
+  .owd-desktop {
+    @media(max-width: 1264px) {
+      min-height: calc(100vh - 24px) !important;
+    }
+  }
+
+  .block {
+    display: flex;
+    align-items: center;
+    min-height: 60vh;
+  }
+
+  .container {
+    padding: 0;
   }
 </style>
