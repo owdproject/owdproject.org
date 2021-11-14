@@ -1,2 +1,7 @@
 http://owdproject.com/* https://owdproject.org/:splat 301!
 https://owdproject.com/* https://owdproject.org/:splat 301!
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
