@@ -5,7 +5,10 @@
         :fluid="$vuetify.breakpoint.mdAndDown"
     >
 
-      <v-img class="owd-preview__laptop" src="media/owd-laptop.png" max-width="100%" contain />
+      <img
+          class="owd-preview__laptop"
+          src="media/owd-laptop.png"
+      />
 
       <v-responsive class="owd-preview__iframe-container" :aspect-ratio="16/9" v-intersect="onIntersect">
         <v-progress-circular indeterminate color="#444" class="owd-preview__iframe-loader" v-if="!iframeLoaded" />
@@ -54,12 +57,16 @@ export default {
   position: relative;
   padding: 150px 0 !important;
 
+  &__laptop {
+    max-width: 100%;
+  }
+
   &__iframe-container {
     position: absolute;
     top: 177px;
     left: 141px;
     right: 141px;
-    bottom: 230px;
+    bottom: 238px;
     background: #0b0b0c;
     border-radius: 2px;
     overflow: hidden;

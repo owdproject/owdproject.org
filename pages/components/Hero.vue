@@ -19,7 +19,8 @@
           </v-btn>
 
           <v-btn color="#2f2f2f" class="grey--text text--lighten-1 mb-3" large rounded :href="owdLinkRepository + '/tree/next'" target="_blank">
-            <v-icon color="white" left size="25" class="mr-3">mdi-github</v-icon> GitHub
+            <v-icon color="white" left size="25" class="mr-3" style="margin-top: -2px;">mdi-github</v-icon>
+            GitHub
           </v-btn>
 
         </v-col>
