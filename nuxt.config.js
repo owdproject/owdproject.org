@@ -31,7 +31,7 @@ export default {
     SOCIAL_LINK_DISCORD: 'http://discord.gg/3KFVP8b',
     OWD_LINK_MODULES: 'https://github.com/topics/owd-modules',
     OWD_LINK_THEMES: 'https://github.com/topics/owd-themes',
-    OWD_LINK_DEMO: 'https://next-demo.owdproject.org/'
+    OWD_LINK_DEMO: 'https://hacklover.net/boot'
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

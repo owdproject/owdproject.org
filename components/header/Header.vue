@@ -1,26 +1,27 @@
 <template>
-  <v-toolbar color="transparent" max-height="64px" height="64px" elevation="0">
+  <v-container>
+    <v-toolbar max-height="72px" height="72px" elevation="0">
 
-    <v-toolbar-title
-        v-text="`Open Web Desktop`"
-    />
+      <v-toolbar-title>
+        Open Web Desktop
+      </v-toolbar-title>
 
-    <v-spacer />
+      <v-spacer />
 
-    <HeaderMenuClient />
-    <HeaderMenuModules />
+      <HeaderMenuClient />
+      <HeaderMenuModules />
 
-  </v-toolbar>
+    </v-toolbar>
+  </v-container>
 </template>
 
 <script>
 import mixinLinks from "@/mixins/mixinLinks";
-import Logo from "~/components/Logo";
 import HeaderMenuClient from "./menu/HeaderMenuClient";
 import HeaderMenuModules from "./menu/HeaderMenuModules";
 
 export default {
-  components: {HeaderMenuModules, HeaderMenuClient, Logo},
+  components: {HeaderMenuModules, HeaderMenuClient},
   mixins: [mixinLinks],
   data() {
     return {
@@ -29,21 +30,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  .theme--dark.v-toolbar {
-    border: 0 !important;
-    box-shadow: none !important;
-
-    & .v-sheet {
-      user-select: none;
-      border: 0;
-    }
-  }
-
-  .v-menu__content {
-    width: 320px !important;
-    min-width: auto !important;
-    max-width: 100%;
-  }
-</style>

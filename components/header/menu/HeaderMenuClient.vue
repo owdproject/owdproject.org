@@ -1,7 +1,8 @@
 <template>
   <v-menu
       :close-on-content-click="false"
-      nudge-bottom="66"
+      nudge-bottom="56" bottom left
+      min-width="360"
   >
     <template v-slot:activator="{ on, attrs }">
       <v-btn
@@ -15,8 +16,9 @@
     </template>
 
     <v-card>
+
       <v-list>
-        <v-list-item>
+        <v-list-item :href="owdLinkRepository" target="_blank">
           <v-list-item-avatar tile>
             <img
                 src="favicon.png"

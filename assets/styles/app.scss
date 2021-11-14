@@ -13,7 +13,7 @@
 
 #app {
   &.theme--dark {
-    background: #212121;
+    background: #252525;
   }
 }
 
@@ -22,17 +22,57 @@
     text-decoration: none;
   }
 
+  pre {
+    font-size: 14px;
+    opacity: 0.75;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+
   .container {
     @media (min-width: 1904px) {
       max-width: 1185px;
     }
   }
 
+  .v-toolbar {
+    background: #252525 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    user-select: none;
+    font-weight: bold;
+  }
+
   .v-menu__content {
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+    max-width: 100%;
+    box-shadow: none !important;
+    border-radius: 8px;
+    overflow: hidden;
 
     .v-divider {
       border-color: rgba(255,255,255,0.05);
+    }
+  }
+
+  .v-main {
+    position: relative;
+    min-height: 402px;
+
+    a {
+      color: #3483e4;
+      transition: color 0.5s ease-in-out;
+
+      &:hover {
+        color: #666;
+      }
+    }
+
+    .row {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
     }
   }
 }
