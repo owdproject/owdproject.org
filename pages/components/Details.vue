@@ -31,19 +31,21 @@
           <v-divider vertical />
         </v-col>
         <v-col md="9" cols="12">
-          <p>
-            Open Web Desktop is a project that aims to provide a simple environment to create your own web desktop,
-            extendable through a series of modules and integrations. OWD Client is based on Vue.js 3 and TypeScript.
-          </p>
-
-          <p>
-            <a href="https://demo.owdproject.org" target="_blank">Check the demo</a>
-            of the <code style="vertical-align: 1px;">owd-client</code> base repository, decked out with some modules.
-          </p>
-
-          <br />
-
           <section>
+            <template v-if="['introduction', 'quick-start'].includes(sectionActive)">
+              <p>
+                Open Web Desktop is a project that aims to provide a simple environment to create your own web desktop,
+                extendable through a series of modules and integrations. OWD Client is based on Vue.js 3 and TypeScript.
+              </p>
+
+              <p>
+                <a href="https://demo.owdproject.org" target="_blank">Check the demo</a>
+                of the <code style="vertical-align: 1px;">owd-client</code> base repository, decked out with some modules.
+              </p>
+
+              <br />
+            </template>
+
             <template v-if="sectionActive === 'introduction'">
               <h3>Features</h3>
 
@@ -78,6 +80,31 @@ npm run serve
                 </li>
               </ul>
             </template>
+
+            <template v-if="sectionActive === 'showcase'">
+              <a :href="socialLinkPatreon" target="_blank">
+                <v-alert color="grey darken-3" icon="mdi-patreon">
+                  Become a patron to get a chance to have your OWD project featured on owdproject.org
+                </v-alert>
+              </a>
+
+              <div class="showcase-container mt-6 mx-n3">
+                <v-row>
+                  <v-col v-for="(project, p) of showcase" :key="p" cols="3">
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-responsive v-bind="attrs" v-on="on" :aspect-ratio="16/9">
+                          <a :href="project.url" target="_blank">
+                            <v-img :src="`showcase/${project.image}`" :alt="project.url" />
+                          </a>
+                        </v-responsive>
+                      </template>
+                      <span v-text="project.name" />
+                    </v-tooltip>
+                  </v-col>
+                </v-row>
+              </div>
+            </template>
           </section>
 
         </v-col>
@@ -110,6 +137,21 @@ export default {
             name: 'mdi-cog-play-outline',
             size: 30
           }
+        },
+        {
+          name: 'showcase',
+          title: 'Showcase',
+          icon: {
+            name: 'mdi-view-carousel-outline',
+            size: 30
+          }
+        }
+      ],
+      showcase: [
+        {
+          name: "hacklover's lab",
+          url: "https://hacklover.net",
+          image: "hacklover.net.png"
         }
       ]
     }
@@ -134,11 +176,18 @@ export default {
 
   section {
     @media(min-width: 900px) {
-      height: 230px;
+      height: 368px;
     }
 
     h3 {
       color: #bbb;
+    }
+  }
+
+  .showcase-container {
+    .v-image {
+      overflow: hidden;
+      border-radius: 5px;
     }
   }
 }

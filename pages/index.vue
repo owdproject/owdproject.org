@@ -6,18 +6,18 @@
     <v-divider />
 
     <Preview />
-    <Features />
+    <Details />
 
   </div>
 </template>
 
 <script>
 import Hero from "./components/Hero";
-import Features from "./components/Features";
+import Details from "./components/Details";
 import Preview from "./components/Preview";
 
 export default {
-  components: {Hero, Features, Preview},
+  components: {Hero, Details, Preview},
   head() {
     return {
       titleTemplate: '%s - A fully modular web desktop in Vue.js',
