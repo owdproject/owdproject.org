@@ -18,12 +18,12 @@ export default {
       { hid: 'description', name: 'description', content: 'Open Web Desktop is a fully modular project made with Vue.js that aims to provide a simple environment to create your own web desktop' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/x-icon', href: './favicon.png' }
     ]
   },
 
   env: {
-    BASE_URL: 'https://owdproject.com',
+    BASE_URL: 'https://owdproject.org',
     SOCIAL_LINK_GITHUB: 'https://github.com/owdproject/owd-client',
     SOCIAL_LINK_TWITTER: 'https://twitter.com/owdproject',
     SOCIAL_LINK_PATREON: 'https://patreon.com/hacklover',
@@ -88,7 +88,7 @@ export default {
     theme_color: '#2775a7',
     lang: 'en',
     ogHost: process.env.BASE_URL,
-    ogImage: '/logo-large.jpg',
+    ogImage: './logo-large.jpg',
     nativeUI: true,
     twitterCard: 'summary_large_image',
     twitterSite: '@owdproject',
@@ -108,7 +108,7 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    publicPath: '/dist/',
+    publicPath: process.env.NODE_ENV !== 'production' ? '/dist/' : './',
     transpile: ['lodash-es', 'vuetify/lib'],
     extractCSS: true,
   },
