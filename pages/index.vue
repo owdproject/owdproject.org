@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import Hero from "./components/Hero";
-import Details from "./components/Details";
-import Preview from "./components/Preview";
+import Hero from "../components/home/Hero";
+import Details from "../components/home/Details";
+import Preview from "../components/home/Preview";
 
 export default {
   components: {Hero, Details, Preview},
