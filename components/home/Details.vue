@@ -95,7 +95,7 @@ npm run serve
                       <template v-slot:activator="{ on, attrs }">
                         <v-responsive v-bind="attrs" v-on="on" :aspect-ratio="16/9">
                           <a :href="project.url" target="_blank">
-                            <v-img :src="`showcase/${project.image}`" :alt="project.name" />
+                            <v-img :src="`https://raw.githubusercontent.com/owdproject/owdproject.org/master/config/featured/media/${project.image}`" :alt="project.name" />
                           </a>
                         </v-responsive>
                       </template>

@@ -1,13 +1,9 @@
+import axios from "axios";
+
 export default {
   state: {
-    list: [
-      {
-        name: "hacklover's lab",
-        url: "https://hacklover.net",
-        image: "hacklover.net.png"
-      }
-    ],
-    active: 0
+    list: [],
+    active: -1
   },
   getters: {
     featuredList(state) {
@@ -21,6 +17,9 @@ export default {
     }
   },
   mutations: {
+    SET_LIST(state, list) {
+      state.list = list
+    },
     SET_ACTIVE(state, id) {
       state.active = id
     },
@@ -37,6 +36,16 @@ export default {
       } else {
         state.active = 0
       }
+    }
+  },
+  actions: {
+    loadFeaturedList({commit}) {
+      return axios.get('https://raw.githubusercontent.com/owdproject/owdproject.org/master/config/featured/config.json')
+        .then(response => {
+          commit('SET_LIST', response.data)
+          return true
+        })
+        .catch(e => false)
     }
   }
 }

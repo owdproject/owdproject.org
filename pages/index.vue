@@ -24,7 +24,8 @@ export default {
     }
   },
   beforeMount() {
-    this.$store.dispatch('repository/getTags')
+    this.$store.dispatch('featured/loadFeaturedList')
+    this.$store.dispatch('repository/loadTags')
   }
 }
 </script>

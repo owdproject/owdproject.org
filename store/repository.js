@@ -30,7 +30,7 @@ export default {
     }
   },
   actions: {
-    getTags({commit}) {
+    loadTags({commit}) {
       return axios.get('https://api.github.com/repos/owdproject/owd-client/tags')
         .then(response => {
           commit('SET_TAGS', response.data)

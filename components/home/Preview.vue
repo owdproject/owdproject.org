@@ -1,5 +1,5 @@
 <template>
-  <div class="block hidden-md-and-down">
+  <div class="block hidden-md-and-down" v-if="$store.getters['featured/featuredActive']">
     <v-container
         class="owd-preview text-center grey--text mb-16"
         :fluid="$vuetify.breakpoint.mdAndDown"
