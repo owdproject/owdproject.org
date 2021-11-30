@@ -4,7 +4,7 @@
       <v-col>
 
         <div class="footer-links mb-6">
-          <a :href="owdLinkRepository + '/tree/next'" target="_blank">
+          <a :href="owdLinkRepository" target="_blank">
             <v-icon size="28">mdi-github</v-icon>
           </a>
           <a :href="socialLinkTwitter" target="_blank">

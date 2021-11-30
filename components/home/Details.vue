@@ -84,18 +84,18 @@ npm run serve
             <template v-if="sectionActive === 'showcase'">
               <a :href="socialLinkPatreon" target="_blank">
                 <v-alert color="grey darken-3" icon="mdi-patreon">
-                  Become a patron to get a chance to have your OWD project featured on owdproject.org
+                  Become a backer to get a chance to have your OWD project featured on owdproject.org
                 </v-alert>
               </a>
 
               <div class="showcase-container mt-6 mx-n3">
                 <v-row>
-                  <v-col v-for="(project, p) of showcase" :key="p" cols="3">
+                  <v-col v-for="(project, p) of $store.getters['featured/featuredList']" :key="p" cols="3">
                     <v-tooltip bottom>
                       <template v-slot:activator="{ on, attrs }">
                         <v-responsive v-bind="attrs" v-on="on" :aspect-ratio="16/9">
                           <a :href="project.url" target="_blank">
-                            <v-img :src="`showcase/${project.image}`" :alt="project.url" />
+                            <v-img :src="`showcase/${project.image}`" :alt="project.name" />
                           </a>
                         </v-responsive>
                       </template>
@@ -145,13 +145,6 @@ export default {
             name: 'mdi-view-carousel-outline',
             size: 30
           }
-        }
-      ],
-      showcase: [
-        {
-          name: "hacklover's lab",
-          url: "https://hacklover.net",
-          image: "hacklover.net.png"
         }
       ]
     }

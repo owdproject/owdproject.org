@@ -23,9 +23,6 @@ export default {
     },
     owdLinkThemes() {
       return process.env.OWD_LINK_THEMES
-    },
-    owdLinkDemo() {
-      return process.env.OWD_LINK_DEMO
     }
   }
 }

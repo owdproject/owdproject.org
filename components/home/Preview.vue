@@ -10,6 +10,16 @@
           src="media/owd-laptop.png"
       />
 
+      <template v-if="$store.getters['featured/featuredCount'] > 1">
+        <a @click="featuredPrev" class="owd-preview__arrow owd-preview__arrow-left">
+          <v-icon>mdi-arrow-left</v-icon>
+        </a>
+
+        <a @click="featuredNext" class="owd-preview__arrow owd-preview__arrow-right">
+          <v-icon>mdi-arrow-right</v-icon>
+        </a>
+      </template>
+
       <v-responsive class="owd-preview__iframe-container" :aspect-ratio="16/9" v-intersect="onIntersect">
         <v-progress-circular indeterminate color="#444" class="owd-preview__iframe-loader" v-if="!iframeLoaded" />
 
@@ -17,7 +27,7 @@
             v-if="isIntersecting"
             v-show="iframeLoaded"
             class="owd-desktop"
-            :src="owdLinkDemo"
+            :src="$store.getters['featured/featuredActive'].url"
             @load="iframeLoaded = true"
         />
       </v-responsive>
@@ -28,10 +38,7 @@
 
 
 <script>
-import mixinLinks from "~/mixins/mixinLinks";
-
 export default {
-  mixins: [mixinLinks],
   data() {
     return {
       iframeLoaded: false,
@@ -43,6 +50,14 @@ export default {
       if (!this.isIntersecting) {
         this.isIntersecting = entries[0].isIntersecting
       }
+    },
+    featuredPrev() {
+      this.iframeLoaded = false
+      this.$store.commit('featured/PREV')
+    },
+    featuredNext() {
+      this.iframeLoaded = false
+      this.$store.commit('featured/NEXT')
     }
   }
 }
@@ -83,6 +98,20 @@ export default {
     top: 50%;
     left: 50%;
     margin: -16px 0 0 -16px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -42px;
+    opacity: 0.2;
+
+    &-left {
+      left: 20px;
+    }
+    &-right {
+      right: 20px;
+    }
   }
 }
 
