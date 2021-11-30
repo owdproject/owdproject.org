@@ -22,6 +22,9 @@ export default {
     },
     SET_ACTIVE(state, id) {
       state.active = id
+
+      // save current featured website to local storage
+      localStorage.setItem('featured-active', id)
     },
     PREV(state) {
       if (state.active > 0) {
@@ -42,7 +45,11 @@ export default {
     loadFeaturedList({commit}) {
       return axios.get('https://raw.githubusercontent.com/owdproject/owdproject.org/master/config/featured/config.json')
         .then(response => {
+          // load previous active featured website from local storage
+          const storageFeaturedActive = localStorage.getItem('featured-active')
+
           commit('SET_LIST', response.data)
+          commit('SET_ACTIVE', storageFeaturedActive ? Number(storageFeaturedActive) : 0)
           return true
         })
         .catch(e => false)
