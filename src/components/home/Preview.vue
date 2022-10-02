@@ -76,7 +76,6 @@ export default {
 .owd-preview {
   position: relative;
   margin: 0 auto;
-  width: 80vw;
   height: 70vh;
   min-height: 600px;
   border-radius: 24px 24px 0 0;
