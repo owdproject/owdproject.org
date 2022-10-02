@@ -23,7 +23,7 @@
             Released under the
             <a :href="`${owdLinkRepository}/blob/master/LICENSE`" target="_blank">GNU GPL 3.0 License</a>
             <br />
-            Copyright &copy; 2021 hacklover#2552 / dxlliv
+            Copyright © 2022 dxlliv.dev / owdproject.org
           </p>
         </div>
 

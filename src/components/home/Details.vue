@@ -34,9 +34,11 @@
           <section>
             <template v-if="['introduction', 'quick-start'].includes(sectionActive)">
               <p>
-                Open Web Desktop is a project that aims to provide a simple environment to create your own web desktop.<br />
-                <a href="https://demo.owdproject.org" target="_blank">Check the demo</a>
-                of the <code style="vertical-align: 1px;">owd-client</code> base repository, decked out with some modules.
+                Open Web Desktop provide a simple desktop environment
+                framework to create your own web desktop.<br class="hidden-md-and-down" />
+                Check out the demo of the <code style="vertical-align: 1px;">owd-client</code>
+                <a target="_blank" href="https://github.com/owdproject/owd-client/tree/next">base repository</a>,
+                decked out with some modules.
               </p>
             </template>
 

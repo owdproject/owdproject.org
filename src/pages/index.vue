@@ -2,9 +2,6 @@
   <div>
 
     <Hero />
-
-    <v-divider />
-
     <Preview />
     <Details />
 
