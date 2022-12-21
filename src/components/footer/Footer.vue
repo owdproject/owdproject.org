@@ -23,7 +23,7 @@
             Released under the
             <a :href="`${owdLinkRepository}/blob/master/LICENSE`" target="_blank">GNU GPL 3.0 License</a>
             <br />
-            Copyright © 2022 dxlliv.dev / owdproject.org
+            Copyright © 2022 – owdproject.org
           </p>
         </div>
 

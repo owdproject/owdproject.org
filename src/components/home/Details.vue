@@ -38,7 +38,7 @@
                 framework to create your own web desktop.<br class="hidden-md-and-down" />
                 Check out the demo of the <code style="vertical-align: 1px;">owd-client</code>
                 <a target="_blank" href="https://github.com/owdproject/owd-client/tree/next">base repository</a>,
-                decked out with some modules.
+                decked with some OWD modules.
               </p>
             </template>
 
