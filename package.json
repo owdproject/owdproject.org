@@ -1,0 +1,36 @@
+{
+  "name": "owdproject.org",
+  "private": true,
+  "description": "Open Web Desktop website",
+  "homepage": "https://github.com/owdproject/owdproject.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owdproject/owdproject.org.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": {
+    "name": "dxlliv",
+    "url": "https://github.com/dxlliv"
+  },
+  "scripts": {
+    "build": "nuxt generate",
+    "dev": "nuxt dev --host",
+    "generate": "nuxt generate --dev",
+    "postinstall": "nuxt prepare",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@owdproject/core": "3.0.0-alpha.3",
+    "@owdproject/docs": "0.0.1",
+    "@owdproject/module-pinia-localforage": "^0.0.1",
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
+    "html2canvas": "^1.4.1",
+    "owd-app-about": "github:owdproject/app-about",
+    "owd-app-debug": "github:owdproject/app-debug",
+    "owd-app-todo": "github:owdproject/app-todo",
+    "owd-app-wasmboy": "github:owdproject/app-wasmboy",
+    "owd-app-xterm": "github:owdproject/app-xterm",
+    "wasmboy": "^0.7.1"
+  }
+}
