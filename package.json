@@ -26,10 +26,6 @@
     "@owdproject/app-debug": "^0.0.2",
     "@owdproject/app-todo": "^0.0.2",
     "@owdproject/app-wasmboy": "^0.0.1",
-    "@owdproject/module-pinia-localforage": "^0.0.1",
-    "@xterm/addon-fit": "^0.10.0",
-    "@xterm/xterm": "^5.5.0",
-    "html2canvas": "^1.4.1",
-    "wasmboy": "^0.7.1"
+    "@owdproject/module-pinia-localforage": "^0.0.1"
   }
 }
