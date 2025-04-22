@@ -1,46 +1,40 @@
-import {owdConfig} from "./owd.config";
-
 export default defineNuxtConfig({
-  ssr: false,
+    ssr: false,
 
-  modules: [
-      '@owdproject/docs',
-      '@owdproject/core',
-  ],
+    modules: [
+        '@owdproject/docs',
+        '@owdproject/core',
+    ],
 
-  extends: [
+    extends: [
+        [
+            'github:owdproject/theme-gnome',
+            {install: true}
+        ]
+    ],
 
-      // import layers: owd theme
-      // @ts-ignore
-      owdConfig.theme,
+    i18n: {
+        strategy: 'no_prefix',
+    },
 
-      // import layers: owd apps
-      ...owdConfig.apps,
+    imports: {
+        presets: [
+            {
+                from: '@owdproject/core',
+                imports: [
+                    'defineDesktopApp'
+                ]
+            }
+        ]
+    },
 
-  ],
+    future: {
+        compatibilityVersion: 4,
+    },
 
-  i18n: {
-      strategy: 'no_prefix',
-  },
+    devtools: {
+        enabled: false,
+    },
 
-  imports: {
-      presets: [
-          {
-              from: '@owdproject/core',
-              imports: [
-                  'defineDesktopApp'
-              ]
-          }
-      ]
-  },
-
-  future: {
-      compatibilityVersion: 4,
-  },
-
-  devtools: {
-      enabled: false,
-  },
-
-  compatibilityDate: '2025-04-19'
+    compatibilityDate: '2025-04-19'
 })

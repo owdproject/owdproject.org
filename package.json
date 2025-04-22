@@ -20,17 +20,16 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
-    "@owdproject/core": "3.0.0-alpha.3",
-    "@owdproject/docs": "0.0.1",
+    "@owdproject/core": "3.0.0-alpha.7",
+    "@owdproject/docs": "0.0.2",
+    "@owdproject/app-about": "^0.0.3",
+    "@owdproject/app-debug": "^0.0.2",
+    "@owdproject/app-todo": "^0.0.2",
+    "@owdproject/app-wasmboy": "^0.0.1",
     "@owdproject/module-pinia-localforage": "^0.0.1",
     "@xterm/addon-fit": "^0.10.0",
     "@xterm/xterm": "^5.5.0",
     "html2canvas": "^1.4.1",
-    "owd-app-about": "github:owdproject/app-about",
-    "owd-app-debug": "github:owdproject/app-debug",
-    "owd-app-todo": "github:owdproject/app-todo",
-    "owd-app-wasmboy": "github:owdproject/app-wasmboy",
-    "owd-app-xterm": "github:owdproject/app-xterm",
     "wasmboy": "^0.7.1"
   }
 }
