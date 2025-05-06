@@ -20,11 +20,13 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
-    "@owdproject/core": "3.0.0-alpha.7",
+    "@owdproject/core": "3.0.0-alpha.8",
+    "@owdproject/theme-gnome": "0.0.1",
     "@owdproject/docs": "0.0.2",
     "@owdproject/app-about": "^0.0.3",
     "@owdproject/app-debug": "^0.0.2",
-    "@owdproject/app-todo": "^0.0.2",
+    "@owdproject/app-todo": "^0.0.3",
+    "@owdproject/app-terminal": "^0.0.1",
     "@owdproject/app-wasmboy": "^0.0.1",
     "@owdproject/module-pinia-localforage": "^0.0.1"
   }
